@@ -8,7 +8,8 @@ Given an initial state of the board, the combinatorial search problem is to find
 The blank space may be swapped with a component in one of the four directions {‘Up’, ‘Down’, ‘Left’, ‘Right’}, one move at a time. The cost of moving from one configuration of the board to another is the same and equal to one. Thus, the total cost of path is equal to the number of moves made from the initial state to the goal state.
 
 
- 
+     
+        
 
 Implementation:
 
@@ -24,8 +25,9 @@ Implementation:
 
 • Depth-First Search. Push onto the stack in reverse-UDLR order; popping off results in UDLR order.
 
-
-
+   
+      
+    
  
 Definition of Variables:
 
