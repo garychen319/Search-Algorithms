@@ -1,0 +1,17 @@
+methods=(bfs dfs ast ida)
+tests=("3,1,2,0,4,5,6,7,8" "1,2,5,3,4,0,6,7,8")
+count=0
+for j in ${tests[@]}; do
+	count=$(( $count + 1 ))
+	echo "==========="
+	echo "Test case:"$j
+	echo "==========="
+	for i in ${methods[@]}; do
+		echo $i "cmp to" $i$count.txt
+		python driver.py $i $j
+		
+		diff output.txt $i$count.txt
+		rm output.txt
+	done
+done
+
