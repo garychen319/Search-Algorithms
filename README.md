@@ -3,12 +3,14 @@ Implementation of BFS, DFS, A-Star Search, IDA-Star Search
 
 Search algorithm to solve the n-puzzle game and compare the performance of each search algorithm (i.e. the 8-puzzle game generalized to an n × n array) (mypuzzle.org/sliding).
 
+------------------------------------------------------------
+
 An instance of the n-puzzle game consists of a board holding n^2 − 1 distinct movable tiles, plus an empty space. The tiles are numbers from the set {1, ..., n^2 − 1}. For any such board, the empty space may be legally swapped with any tile horizontally or vertically adjacent to it. In this assignment, we will represent the blank space with the number 0.
 Given an initial state of the board, the combinatorial search problem is to find a sequence of moves that transitions this state to the goal state; that is, the configuration with all tiles arranged in ascending order ⟨0, 1, ..., n^2 − 1⟩. The search space is the set of all possible states reachable from the initial state.
 The blank space may be swapped with a component in one of the four directions {‘Up’, ‘Down’, ‘Left’, ‘Right’}, one move at a time. The cost of moving from one configuration of the board to another is the same and equal to one. Thus, the total cost of path is equal to the number of moves made from the initial state to the goal state.
 
 
-     
+------------------------------------------------------------
         
 
 Implementation:
@@ -25,8 +27,8 @@ Implementation:
 
 • Depth-First Search. Push onto the stack in reverse-UDLR order; popping off results in UDLR order.
 
-   
-      
+------------------------------------------------------------
+
     
  
 Definition of Variables:
