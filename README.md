@@ -8,7 +8,9 @@ Given an initial state of the board, the combinatorial search problem is to find
 The blank space may be swapped with a component in one of the four directions {‘Up’, ‘Down’, ‘Left’, ‘Right’}, one move at a time. The cost of moving from one configuration of the board to another is the same and equal to one. Thus, the total cost of path is equal to the number of moves made from the initial state to the goal state.
 
 
+
 Implementation:
+
 • Breadth-First Search. Used an explicit queue
 • Depth-First Search. Used an explicit stack
 • A-Star Search. Used a priority queue. For the choice of heuristic, used the Manhattan priority function; that is, the sum of the distances of the tiles from their goal positions. Note that the blanks space is not considered an actual tile here.
@@ -18,7 +20,9 @@ Implementation:
 • Depth-First Search. Push onto the stack in reverse-UDLR order; popping off results in UDLR order.
 
 
+
 Definition of Variables:
+
 path_to_goal: the sequence of moves taken to reach the goal
 cost_of_path: the number of moves taken to reach the goal
 nodes_expanded: the number of nodes that have been expanded
