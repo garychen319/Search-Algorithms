@@ -12,11 +12,15 @@ The blank space may be swapped with a component in one of the four directions {�
 Implementation:
 
 • Breadth-First Search. Used an explicit queue
+
 • Depth-First Search. Used an explicit stack
+
 • A-Star Search. Used a priority queue. For the choice of heuristic, used the Manhattan priority function; that is, the sum of the distances of the tiles from their goal positions. Note that the blanks space is not considered an actual tile here.
+
 • IDA-Star Search. As before, for the choice of heuristic, used the Manhattan priority function. Implementing the Iterative Deepening Search (IDS) algorithm involves first implementing the Depth-Limited Search (DLS) algorithm as a subroutine.
 
 • Breadth-First Search. Enqueue in UDLR order; dequeuing results in UDLR order.
+
 • Depth-First Search. Push onto the stack in reverse-UDLR order; popping off results in UDLR order.
 
 
@@ -24,7 +28,17 @@ Implementation:
 Definition of Variables:
 
 path_to_goal: the sequence of moves taken to reach the goal
+
 cost_of_path: the number of moves taken to reach the goal
+
 nodes_expanded: the number of nodes that have been expanded
+
 fringe_size: the size of the frontier set when the goal node is found
-max_fringe_size: the maximum size of the frontier set in the lifetime of the algorithm search_depth: the depth within the search tree when the goal node is found max_search_depth: the maximum depth of the search tree in the lifetime of the algorithm running_time: the total running time of the search instance, reported in seconds max_ram_usage: the maximum RAM usage in the lifetime of the process as measured by the ru_maxrss attribute in the resource module, reported in megabytes
+
+max_fringe_size: the maximum size of the frontier set in the lifetime of the algorithm
+
+search_depth: the depth within the search tree when the goal node is found
+
+max_search_depth: the maximum depth of the search tree in the lifetime of the algorithm
+
+running_time: the total running time of the search instance, reported in seconds max_ram_usage: the maximum RAM usage in the lifetime of the process as measured by the ru_maxrss attribute in the resource module, reported in megabytes
